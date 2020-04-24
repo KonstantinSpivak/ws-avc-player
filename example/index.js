@@ -23,15 +23,15 @@ const wss = new WebSocketServer({ /* port: 3333 */ server });
 // init the avc server.
 const avcServer = new AvcServer(wss, width, height);
 
-// OPTIONAL: start on connect
-avcServer.on('client_connected', (client) => {
-  console.log('client_connected, size: ' + avcServer.clients.size, client);
-});
+// // OPTIONAL: start on connect
+// avcServer.on('client_connected', (client) => {
+//   console.log('client_connected, size: ' + avcServer.clients.size, client);
+// });
 
-// OPTIONAL: stop on disconnect
-avcServer.on('client_disconnected', (client) => {
-  console.log('client_disconnected, size: ' + avcServer.clients.size, client);
-});
+// // OPTIONAL: stop on disconnect
+// avcServer.on('client_disconnected', (client) => {
+//   console.log('client_disconnected, size: ' + avcServer.clients.size, client);
+// });
 
 // create the tcp sever that accepts a h264 stream and broadcasts it back to the clients
 this.tcpServer = net.createServer((socket) => {
