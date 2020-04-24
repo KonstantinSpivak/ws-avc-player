@@ -9,8 +9,8 @@ const net = require('net')
 const spawn = require('child_process').spawn
 
 const useRaspivid = process.argv.includes('raspivid')
-const width = 1280
-const height = 720
+const width = 640
+const height = 480
 
 const express = require('express')
 const app = express()
